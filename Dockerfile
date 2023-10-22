@@ -10,6 +10,6 @@ COPY config .
 COPY translations .
 RUN npm install
 RUN npm run build
-
+# Expose port 80 to allow incoming HTTP traffic to the container
 EXPOSE 80
 CMD ["npm", "run", "start"]
